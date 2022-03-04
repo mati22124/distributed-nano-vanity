@@ -1,2 +1,10 @@
-# distributed-nano-vanity
-Distributed Nano Vanity address adapted from PlasmaPower/curve25519-repl
+# Nano Distributed Vanity
+Hey community! I found a way to create custom xrb_ address for the community using distributed vanity! All credit goes to PlasmaPower's repos because they had all the code, I am just bringing it to the public. For your information, the key comes back to you as an Extended private key, which from what I can see, only works in nault. I want to show how we can turn complex technology into something the entire community can use, like cryptography! Speaking of technology lets see how it works.
+## How it works
+Lets say you generate keypair A. Keypair A has A_priv and A_pub in the ring. You want me to make a key for you. You give me A_pub to use as an offset for when I generate the address. I make the vanity address using my computer with your offset and I generate B_priv which is the private key with your offset. I give you B_priv and you run some commands in your computer that essentially does A_priv+B_priv=C_priv and there you go! C_priv is the final Extended private key they you can use in nault
+## Getting started/Installation
+First you need to have rust and cargo. I use rustup.rs to install rust and I recommend you use it too. The instructions per system is pretty straightforward. Make sure you follow all the instructions at the end, otherwise it wont work. You will have to add something to your environmental variables for linux. Next you need to clone the repo https://github.com/PlasmaPower/curve25519-repl. This is the repo that gives you a nice terminal with access to all the calculations you need to do. To clone on debian/ubuntu, just do sudo apt install git and then git clone https://github.com/PlasmaPower/curve25519-repl. After you clone it, go into the directory. Thats cd curve25519-repl for linux and for windows gui users you can just right click while holding shift. An option should come up to open with windows terminal or powershell/command prompt. On that line, type cargo install --path . Give that a second to run. When it finishes, type curve25519-repland you're done! You should see an arrow like this > 
+## Instructions
+For instructions check the example folder!
+
+By the way, this is my first time doing anything like this so if any mistakes are made it would be greatly appriciated if you spotted it out. I am also open about changing anything!
